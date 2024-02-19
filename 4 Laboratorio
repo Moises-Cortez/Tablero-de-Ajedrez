@@ -1,0 +1,21 @@
+void setup() {
+  size(400, 400);
+  drawChessboard();
+}
+
+void drawChessboard() {
+  int tileSize = width / 8; // Tamaño de cada casilla
+
+  for (int i = 0; i < 8; i++) {  // Filas
+    for (int j = 0; j < 8; j++) {  // Columnas
+      // Alternar el color de fondo entre blanco y negro
+      if ((i + j) % 2 == 0) {
+        fill(255); // Blanco
+      } else {
+        fill(0); // Negro
+      }
+      // Dibujar la casilla
+      rect(i * tileSize, j * tileSize, tileSize, tileSize);
+    }
+  }
+}
